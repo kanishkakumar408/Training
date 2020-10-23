@@ -8,3 +8,6 @@
 
 5. ls - It list all the file in the present working directory.
 
+6. touch text.txt - It creates a text file into present working directory.
+
+7. cat > text.txt - It creates a text file and allow you to give some input.
