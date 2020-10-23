@@ -15,3 +15,9 @@
 8. uname -r - It tells the current version of our os.
 
 9. uname -a - It tells the whole/all information about our Os.
+
+10.rm -r newdir - It will remove newdir named directory.
+
+11. rm file1.txt file2.txt - It will removes multiple file (i.e, file1.txt , file2.txt) from pwd.
+
+12. rm file.txt - It will remove file file.txt from pwd.
