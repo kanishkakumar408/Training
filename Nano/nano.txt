@@ -1,0 +1,5 @@
+1. ctrl + x - exit from the file
+
+2. ctrl + u - for copy
+
+3. ctrl + k - for cut
