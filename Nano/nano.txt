@@ -2,4 +2,4 @@
 
 2. ctrl + u - for copy
 
-3. ctrl + k - for cut
+3. ctrl + k - for cut.
