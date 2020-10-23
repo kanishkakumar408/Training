@@ -31,3 +31,7 @@
 16. clear - It will clear the terminal.
 
 17. history - It will display previously ran command
+
+18. grep "and" kans1.txt - It highlights the number of "and" word in the whole file.
+
+
