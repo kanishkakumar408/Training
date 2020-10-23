@@ -36,4 +36,6 @@
 
 19. mv file1.txt file2.txt - It moves data of file file1.txt to file2.txt and deletes the first file.
 
+20. chmod 741 text.txt - It will give read , write and execute permissions to admin , group and also to a guest.
+
 
