@@ -23,3 +23,9 @@ Git commands -
 11. git checkout Main - switches from current branch to Main branch.
 
 12. git branch - It will show the current branch.
+
+13. git push - It will upload local repository content at remote repository.
+
+14. git push -u origin master - It will the push the commit to origin from the master directory(locally stored).
+
+
