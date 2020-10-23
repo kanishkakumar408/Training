@@ -28,4 +28,6 @@
 
 15. scp text.txt beryl@192.168.43.103:home/beryl/desktop - It will copy the text file from pwd to host with given IP address at specified directory.
 
+16. clear - It will clear the terminal.
 
+17. history - It will display previously ran command
