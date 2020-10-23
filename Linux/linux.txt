@@ -34,4 +34,6 @@
 
 18. grep "and" kans1.txt - It highlights the number of "and" word in the whole file.
 
+19. mv file1.txt file2.txt - It moves data of file file1.txt to file2.txt and deletes the first file.
+
 
