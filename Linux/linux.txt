@@ -25,3 +25,7 @@
 13. cp file1.txt file2.txt - It will copy data from file1.txt to file2.txt
 
 14. cp -r folder1 folder2 - It will copy data from folder1 to folder2.
+
+15. scp text.txt beryl@192.168.43.103:home/beryl/desktop - It will copy the text file from pwd to host with given IP address at specified directory.
+
+
