@@ -18,4 +18,8 @@ Git commands -
 
 9. git remote add origin "http://github.com/kanishkakumar408/Training.git - It will create a new remote known as origin at the respective url.
 
+10. git branch Main - creates a new branch(Main)
 
+11. git checkout Main - switches from current branch to Main branch.
+
+12. git branch - It will show the current branch.
