@@ -42,4 +42,8 @@
 
 22. ctrl + alt + T - opens terminal
 
+23. head kans.txt - It will print first few lines of the files.
+
+24. tail kans.txt - It will print last few lines of the files.
+
 
