@@ -11,3 +11,5 @@
 6. alt + / - move cursor to bottom
 
 7. ctrl + w - search 
+
+8. alt + r - replace a word
