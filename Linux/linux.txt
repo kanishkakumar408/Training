@@ -21,3 +21,7 @@
 11. rm file1.txt file2.txt - It will removes multiple file (i.e, file1.txt , file2.txt) from pwd.
 
 12. rm file.txt - It will remove file file.txt from pwd.
+
+13. cp file1.txt file2.txt - It will copy data from file1.txt to file2.txt
+
+14. cp -r folder1 folder2 - It will copy data from folder1 to folder2.
