@@ -1,5 +1,13 @@
 1. ctrl + x - exit from the file
 
-2. ctrl + u - for copy
+2. ctrl + u - for paste
 
-3. ctrl + k - for cut.
+3. ctrl + k - for cut
+
+4. ctrl + o - save a file
+
+5. alt + \ - move curson to top
+
+6. alt + / - move cursor to bottom
+
+7. ctrl + w - search 
