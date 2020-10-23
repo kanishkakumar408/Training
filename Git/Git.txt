@@ -16,3 +16,6 @@ Git commands -
 
 8. git commit -m " " - it saves the file present in staging area to the local repository with user defined message.
 
+9. git remote add origin "http://github.com/kanishkakumar408/Training.git - It will create a new remote known as origin at the respective url.
+
+
