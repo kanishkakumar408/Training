@@ -7,3 +7,7 @@ Git commands -
 3. git add. - It will add all the files in the staging area.
 
 4. git add *.txt - It will all file with .txt extension into the staging area from present directory.
+
+5. git rm --cached data.txt - deletes data.txt from the staging area.
+
+6. git rm --cached *.txt - deletes all the file with .txt extension from the staging area.
