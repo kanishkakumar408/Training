@@ -31,3 +31,6 @@ Git commands -
 15. git clone http://github.com/kanishkakumar/Training.git - it will copy the targested repository into the local repository.
 
 16. git log - It will show commit history for a repository.
+
+17. git config --global user.name 'kanishka' - It will sets username as 'kanishka' with respect to the configuration.
+
