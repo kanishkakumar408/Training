@@ -1,3 +1,5 @@
 1. mkdir - It will create a new directory (mkdir data )
 
 2. rmdir - It removes a directory which is empty (rmdir data)
+
+3. pwd - It shows present working directory (/home/beryl/Training)
