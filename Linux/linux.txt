@@ -11,3 +11,7 @@
 6. touch text.txt - It creates a text file into present working directory.
 
 7. cat > text.txt - It creates a text file and allow you to give some input.
+
+8. uname -r - It tells the current version of our os.
+
+9. uname -a - It tells the whole/all information about our Os.
