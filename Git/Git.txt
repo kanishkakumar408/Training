@@ -28,4 +28,4 @@ Git commands -
 
 14. git push -u origin master - It will the push the commit to origin from the master directory(locally stored).
 
-
+15. git clone http://github.com/kanishkakumar/Training.git - it will copy the targested repository into the local repository.
