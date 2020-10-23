@@ -46,4 +46,5 @@
 
 24. tail kans.txt - It will print last few lines of the files.
 
+25. Less kans2.txt - It will allow us to view file kans2.txt without opening editor.
 
