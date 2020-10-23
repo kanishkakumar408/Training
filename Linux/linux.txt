@@ -3,3 +3,8 @@
 2. rmdir - It removes a directory which is empty (rmdir data)
 
 3. pwd - It shows present working directory (/home/beryl/Training)
+
+4. cd - It changes present directory to other directory.
+
+5. ls - It list all the file in the present working directory.
+
