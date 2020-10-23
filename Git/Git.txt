@@ -11,3 +11,8 @@ Git commands -
 5. git rm --cached data.txt - deletes data.txt from the staging area.
 
 6. git rm --cached *.txt - deletes all the file with .txt extension from the staging area.
+
+7. git status - it display the status of working directory and staging area.
+
+8. git commit -m " " - it saves the file present in staging area to the local repository with user defined message.
+
