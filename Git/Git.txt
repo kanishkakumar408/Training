@@ -1,0 +1,9 @@
+Git commands -
+
+1. Git init - creates empty local repository in the present directory.
+
+2. git add data.txt - It will add the data.txt file from the present directory to the staging area.
+
+3. git add. - It will add all the files in the staging area.
+
+4. git add *.txt - It will all file with .txt extension into the staging area from present directory.
