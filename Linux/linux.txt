@@ -38,4 +38,8 @@
 
 20. chmod 741 text.txt - It will give read , write and execute permissions to admin , group and also to a guest.
 
+21. exit - exit from terminal
+
+22. ctrl + alt + T - opens terminal
+
 
