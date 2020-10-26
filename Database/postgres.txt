@@ -97,6 +97,20 @@ ipl=# select * from team where id<=2 or id>3;
  Royal challenger bangalore |  2 |            18 | bangalore
  delhi capitals  
 
+10. Alter table - (adding column into table team ) -
+
+ipl=# alter table team add column budget int;
+ALTER TABLE
+ipl=# select * from team;
+            name            | id | no_of_players | homeground | budget 
+----------------------------+----+---------------+------------+--------
+ chennai super kings        |  1 |            20 | chennai    |       
+ Royal challenger bangalore |  2 |            18 | bangalore  |       
+ Mumbai indians             |  3 |            20 | Mumbai     |       
+ delhi capitals             |  4 |            17 | delhi      |       
+
+
+
 
 
 
