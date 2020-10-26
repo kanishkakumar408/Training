@@ -12,17 +12,42 @@ DROP DATABASE
 
 3. Create Table-
 
-postgres=# Create table kans(name varchar Not null,
-postgres(# Id Int not null,
-postgres(# age int not null,
-postgres(# address varchar not null
-postgres(# );
+postgres=# \c ipl
+You are now connected to database "ipl" as user "postgres".
+ipl=# \dt
+Did not find any relations.
+ipl=# Create table Team(Name varchar not null,
+ipl(# Id Int Primary key not null,
+ipl(# No_of_players int not null,
+ipl(# homeground varchar not null
+ipl(# );
 CREATE TABLE
+
 
 4. Drop Table-
 
-postgres=# Drop table kans;
+postgres=# Drop table ipl;
 DROP TABLE
+
+5. Inserting data - 
+
+postgres=# \c ipl
+ipl=# Insert into team values('chennai super kings',1,20,'chennai');
+INSERT 0 1
+
+ipl=# Insert into team values('Royal challenger bangalore',2,18,'bangalore');
+INSERT 0 1
+
+ipl=# Insert into team values('Mumbai indians',3,20,'Mumbai');
+INSERT 0 1
+
+ipl=# Insert into team values('delhi capitals',4,17,'delhi');
+INSERT 0 1
+
+
+
+
+
 
 
 
