@@ -81,6 +81,24 @@ ipl=# select * from team where homeground LIKE 'ban%';
 (1 row)
 
 
+9. AND & OR clause -
+
+ipl=# select * from team where id<4 and id>2;
+      name      | id | no_of_players | homeground 
+----------------+----+---------------+------------
+ Mumbai indians |  3 |            20 | Mumbai
+(1 row)
+
+
+ipl=# select * from team where id<=2 or id>3;
+            name            | id | no_of_players | homeground 
+----------------------------+----+---------------+------------
+ chennai super kings        |  1 |            20 | chennai
+ Royal challenger bangalore |  2 |            18 | bangalore
+ delhi capitals  
+
+
+
 
 
 
