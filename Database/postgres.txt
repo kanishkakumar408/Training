@@ -137,6 +137,23 @@ ipl=# select * from team;
 12. ipl=# Delete from team where id=6;
 DELETE 1
 
+13. LIKE Clause - ipl=# select * from team where budget::text LIKE '72%';
+      name      | id | no_of_players | homeground |  budget   ipl=# select * from team where budget::text LIKE '72%';
+      name      | id | no_of_players | homeground |  budget   
+----------------+----+---------------+------------+-----------
+ Mumbai indians |  3 |            20 | Mumbai     | 720000000
+
+----------------+----+---------------+------------+-----------
+ Mumbai indians |  3 |            20 | Mumbai     | 720000000
+
+
+ipl=# select * from team where homeground like 'ban%';
+            name            | id | no_of_players | homeground |  budget   
+----------------------------+----+---------------+------------+-----------
+ Royal challenger bangalore |  2 |            18 | bangalore  | 700000000
+
+
+
 
 
 
