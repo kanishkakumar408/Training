@@ -1,0 +1,15 @@
+Postgres -
+
+1. Create Database -
+
+postgres=# Create database ipl;
+CREATE DATABASE
+
+2. Drop Database -
+
+postgres=# Drop database ipl;
+DROP DATABASE
+
+
+
+
