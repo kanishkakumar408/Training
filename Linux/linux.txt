@@ -52,3 +52,5 @@
 
 27. passwd - It is used to change the user account password.
 
+28. sudo - Used as prefix of some command that only superuser are allowed to run.
+
