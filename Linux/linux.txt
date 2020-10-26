@@ -50,3 +50,5 @@
 
 26. apt-get - It is a command line tool which helps in handling packages in Linux.
 
+27. passwd - It is used to change the user account password.
+
