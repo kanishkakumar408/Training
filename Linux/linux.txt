@@ -48,3 +48,5 @@
 
 25. Less kans2.txt - It will allow us to view file kans2.txt without opening editor.
 
+26. apt-get - It is a command line tool which helps in handling packages in Linux.
+
