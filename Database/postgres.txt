@@ -1,14 +1,30 @@
 Postgres -
 
-1. Create Database -
+1. Create Database ipl-
 
 postgres=# Create database ipl;
 CREATE DATABASE
 
-2. Drop Database -
+2. Drop Database ipl -
 
 postgres=# Drop database ipl;
 DROP DATABASE
+
+3. Create Table-
+
+postgres=# Create table kans(name varchar Not null,
+postgres(# Id Int not null,
+postgres(# age int not null,
+postgres(# address varchar not null
+postgres(# );
+CREATE TABLE
+
+4. Drop Table-
+
+postgres=# Drop table kans;
+DROP TABLE
+
+
 
 
 
