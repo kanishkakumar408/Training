@@ -57,6 +57,31 @@ ipl=# Select * from team;
 (4 rows)
 
 
+7. Operators -
+
+a. arithmatic operators - +,-,/,*,% etc.
+b. comparison operators - =,!=,<,>,<=,>=,<>.
+c. Logical operators - AND , NOT & OR.
+d. Bitwise operators - & ,| ,<< , >>
+
+8. where clause -
+
+ipl=# select * from team where no_of_players >18;
+        name         | id | no_of_players | homeground 
+---------------------+----+---------------+------------
+ chennai super kings |  1 |            20 | chennai
+ Mumbai indians      |  3 |            20 | Mumbai
+(2 rows)
+
+
+ipl=# select * from team where homeground LIKE 'ban%';
+            name            | id | no_of_players | homeground 
+----------------------------+----+---------------+------------
+ Royal challenger bangalore |  2 |            18 | bangalore
+(1 row)
+
+
+
 
 
 
