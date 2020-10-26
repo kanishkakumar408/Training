@@ -152,6 +152,27 @@ ipl=# select * from team where homeground like 'ban%';
 ----------------------------+----+---------------+------------+-----------
  Royal challenger bangalore |  2 |            18 | bangalore  | 700000000
 
+14. Limit clause -
+
+ipl=# select * from team Limit 3;
+            name            | id | no_of_players | homeground |  budget   
+----------------------------+----+---------------+------------+-----------
+ chennai super kings        |  1 |            20 | chennai    | 800000000
+ Royal challenger bangalore |  2 |            18 | bangalore  | 700000000
+ Mumbai indians             |  3 |            20 | Mumbai     | 720000000
+
+15. Order by Clause -
+
+ipl=# select * from team order by name;
+            name            | id | no_of_players | homeground |  budget   
+----------------------------+----+---------------+------------+-----------
+ chennai super kings        |  1 |            20 | chennai    | 800000000
+ delhi capitals             |  4 |            17 | delhi      | 800000000
+ king x1 punjab             |  5 |            21 | mohali     | 800000000
+ Mumbai indians             |  3 |            20 | Mumbai     | 720000000
+ Royal challenger bangalore |  2 |            18 | bangalore  | 700000000
+
+
 
 
 
