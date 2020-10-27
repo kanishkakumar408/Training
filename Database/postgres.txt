@@ -183,6 +183,16 @@ ipl=# select player_id, sum(sold_at) from player group by player_id;
          2 | 110000000
          1 |  18000000
 
+17. distinct clause -
+
+ipl=# select distinct player_id from player;
+ player_id 
+-----------
+         3
+         2
+         1
+
+
 
 
 
