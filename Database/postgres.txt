@@ -192,6 +192,34 @@ ipl=# select distinct player_id from player;
          2
          1
 
+18. Constraints ( Primary key , foreign key , not null , unique, check constraints)
+
+ipl=# create Database contraints;
+CREATE DATABASE
+ipl=# create table company1(Id INT PRIMARY KEY NOT NULL,
+ipl(# NAME TEXT NOT NULL,
+ipl(# AGE INT NOT NULL UNIQUE,
+ipl(# City TEXT ,
+ipl(# Salary varchar
+ipl(# );
+CREATE TABLE
+
+
+ipl=# create table department1(ID int primary key not null,
+ipl(# dept text not null,
+ipl(# emp_id int references company1(id)
+ipl(# );
+CREATE TABLE
+
+
+ipl=# create table company2(ID int primary key not null,
+ipl(# name text not null,
+ipl(# age int not null unique,
+ipl(# salary REAL check(salary>10000)
+ipl(# );
+CREATE TABLE
+
+
 
 
 
