@@ -174,8 +174,14 @@ ipl=# select * from team order by name;
 
 
 
+16. Group by clause -
 
-
+ipl=# select player_id, sum(sold_at) from player group by player_id;
+ player_id |    sum    
+-----------+-----------
+         3 |  95000000
+         2 | 110000000
+         1 |  18000000
 
 
 
