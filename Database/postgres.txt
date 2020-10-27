@@ -299,8 +299,15 @@ ipl=# select name,player_name,id,Player_id,sold_for,sold_at,budget from player r
  Rajasthan Royals           |                  |  8 |           |          |           | 790000000
 
 
+24. delete/drop query-
 
+to delete column -
+ipl=# alter table company1 drop column salary;
+ALTER TABLE
 
+to delete a row -
+ipl=# Delete from company1 where age=20;
+DELETE 1
 
 
 
