@@ -220,6 +220,89 @@ ipl(# );
 CREATE TABLE
 
 
+19. cross Join -  
+
+ipl=# select player_name,player_id from player cross join team limit 10; ( used limit because it will take more space to copy that result here).
+   player_name    | player_id 
+------------------+-----------
+ virat kohli      |         2
+ virat kohli      |         2
+ virat kohli      |         2
+ virat kohli      |         2
+ virat kohli      |         2
+ virat kohli      |         2
+ virat kohli      |         2
+ virat kohli      |         2
+ devdutt paddikal |         2
+ devdutt paddikal |         2
+
+20. Inner join - It matches each row of table1 with each row of table 2 based upon join-predicate.
+
+ipl=# select player_name, player_id , sold_for from player inner join team on team.id=player.player_id;
+   player_name    | player_id | sold_for 
+------------------+-----------+----------
+ virat kohli      |         2 | RCB
+ devdutt paddikal |         2 | RCB
+ Ms dhoni         |         1 | csk
+ suresh Raina     |         1 | csk
+ Rohit sharma     |         3 | MI
+ Bumrah           |         3 | MI
+
+21. Left Outer Join - It gives matching rows and the rows which are in left table but not in right table.
+
+ipl=# select player_name , player_id, sold_for,sold_at from player left outer join team on (player.owner=team.owner);
+   player_name    | player_id | sold_for |  sold_at  
+------------------+-----------+----------+-----------
+ virat kohli      |         2 | RCB      | 100000000
+ devdutt paddikal |         2 | RCB      |  10000000
+ Ms dhoni         |         1 | csk      |  10000000
+ suresh Raina     |         1 | csk      |   8000000
+ Rohit sharma     |         3 | MI       |  90000000
+ Bumrah           |         3 | MI       |   5000000
+(6 rows)
+
+
+22. Right outer join - It gives matching rows and the rows which are in right table but not in left table.
+
+ipl=# select name ,id,sold_for,sold_at,player_name from player right outer join team on (player.owner=team.owner);
+            name            | id | sold_for |  sold_at  |   player_name    
+----------------------------+----+----------+-----------+------------------
+ chennai super kings        |  1 | csk      |   8000000 | suresh Raina
+ chennai super kings        |  1 | csk      |  10000000 | Ms dhoni
+ Royal challenger bangalore |  2 | RCB      |  10000000 | devdutt paddikal
+ Royal challenger bangalore |  2 | RCB      | 100000000 | virat kohli
+ Mumbai indians             |  3 | MI       |   5000000 | Bumrah
+ Mumbai indians             |  3 | MI       |  90000000 | Rohit sharma
+ delhi capitals             |  4 |          |           | 
+ king x1 punjab             |  5 |          |           | 
+ sunriser hyderabad         |  6 |          |           | 
+ kolkata knight rider       |  7 |          |           | 
+ Rajasthan Royals           |  8 |          |           | 
+(11 rows)
+
+23. full outer join - it gives full data like data from left table,right table and also matching rows on the given condition.
+
+
+ipl=# select name,player_name,id,Player_id,sold_for,sold_at,budget from player right outer join team on (player.owner=team.owner);
+            name            |   player_name    | id | player_id | sold_for |  sold_at  |  budget   
+----------------------------+------------------+----+-----------+----------+-----------+-----------
+ chennai super kings        | suresh Raina     |  1 |         1 | csk      |   8000000 | 800000000
+ chennai super kings        | Ms dhoni         |  1 |         1 | csk      |  10000000 | 800000000
+ Royal challenger bangalore | devdutt paddikal |  2 |         2 | RCB      |  10000000 | 700000000
+ Royal challenger bangalore | virat kohli      |  2 |         2 | RCB      | 100000000 | 700000000
+ Mumbai indians             | Bumrah           |  3 |         3 | MI       |   5000000 | 720000000
+ Mumbai indians             | Rohit sharma     |  3 |         3 | MI       |  90000000 | 720000000
+ delhi capitals             |                  |  4 |           |          |           | 800000000
+ king x1 punjab             |                  |  5 |           |          |           | 800000000
+ sunriser hyderabad         |                  |  6 |           |          |           | 780000000
+ kolkata knight rider       |                  |  7 |           |          |           | 790000000
+ Rajasthan Royals           |                  |  8 |           |          |           | 790000000
+
+
+
+
+
+
 
 
 
