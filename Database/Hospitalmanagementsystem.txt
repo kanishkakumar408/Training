@@ -53,5 +53,76 @@ hospital_management_system(# P_id int references Patient(P_id),
 hospital_management_system(# remark varchar );
 CREATE TABLE
 
+*************************************Inserting values into tables**************************************************************
 
-jdhdj
+3. Insertion :-
+
+hospital_management_system=# Insert into patient values(1,'Raj','Kumar','Lucknow','Uttar pradesh',226001,20);
+INSERT 0 1
+hospital_management_system=# Insert into patient values(2,'Shiva','Raj','Varanasi','Uttar pradesh',212011,21);
+INSERT 0 1
+hospital_management_system=# Insert into patient values(3,'tejas','talpade','pune','Maharashtra',410038,24);
+INSERT 0 1
+hospital_management_system=# Insert into patient values(4,'Sandeep','Bhumihar','Indore','Madhya pradesh',451010,23);
+INSERT 0 1
+hospital_management_system=# Insert into patient values(5,'krishiv','pandey','Prayagraj','Uttar pradesh',210010,22);
+INSERT 0 1
+
+
+hospital_management_system=# Insert into Hospital values(1111,'Life Line','Prayagraj',5);
+INSERT 0 1
+hospital_management_system=# Insert into Hospital values(1112,'Ambuj','Indore',4);
+INSERT 0 1
+hospital_management_system=# Insert into Hospital values(1113,'Omega','pune',3); 
+INSERT 0 1
+hospital_management_system=# Insert into Hospital values(1114,'appolo','Lucknow',1);
+INSERT 0 1
+hospital_management_system=# Insert into Hospital values(1115,'Trinetra','varanasi',2);
+INSERT 0 1
+
+hospital_management_system=# Insert into Doctor values(111,'shambhav','neurologist',3,1);
+INSERT 0 1
+hospital_management_system=# Insert into Doctor values(112,'Lokesh','physician',5,2);
+INSERT 0 1
+hospital_management_system=# Insert into Doctor values(113,'Mayank','cardiologist',10,3);
+INSERT 0 1
+hospital_management_system=# Insert into Doctor values(114,'Mohan','pshychiatrist',16,4);
+INSERT 0 1
+hospital_management_system=# Insert into Doctor values(115,'soj komyo','Dermatologists',7,5);
+INSERT 0 1
+
+hospital_management_system=# Insert into Bill values(10080,'20-9-10',1200.00,1); 
+INSERT 0 1
+hospital_management_system=# Insert into Bill values(10081,'22-9-10',10000.00,2);
+INSERT 0 1
+hospital_management_system=# Insert into Bill values(10082,'24-9-10',1700.00,3); 
+INSERT 0 1
+hospital_management_system=# Insert into Bill values(10083,'27-9-10',1970.00,4); 
+INSERT 0 1
+hospital_management_system=# Insert into Bill values(10084,'28-9-10',10970.00,5);
+INSERT 0 1
+
+hospital_management_system=# Insert into medicine values(1020,'Combiflam',10.00,1);
+INSERT 0 1
+hospital_management_system=# Insert into medicine values(1021,'Citrazin',18.00,2);
+INSERT 0 1
+hospital_management_system=# Insert into medicine values(1022,'Roxid-M',8.00,3); 
+INSERT 0 1
+hospital_management_system=# Insert into medicine values(1023,'nor metrozil',19.00,4);
+INSERT 0 1
+hospital_management_system=# Insert into medicine values(1024,'zentac',21.00,5); 
+INSERT 0 1
+
+
+hospital_management_system=# Insert into prescribe values(7871,111,1,'small issue');
+INSERT 0 1
+hospital_management_system=# Insert into prescribe values(7872,112,2,'fever');
+INSERT 0 1
+hospital_management_system=# Insert into prescribe values(7873,113,3,'minor attack');
+INSERT 0 1
+hospital_management_system=# Insert into prescribe values(7874,114,4,'small issue');
+INSERT 0 1
+hospital_management_system=# Insert into prescribe values(7875,115,5,'skin problem');
+INSERT 0 1
+
+
