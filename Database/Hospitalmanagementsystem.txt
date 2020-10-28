@@ -1,0 +1,57 @@
+*************************************Hospital Management System*********************************************************
+
+1. Creation of Database:-
+
+postgres=# Create Database hospital_management_system;
+CREATE DATABASE
+
+2. Creation of Table/Relation:- 
+
+hospital_management_system=# Create Table patient(P_id int primary key not null,  
+fname varchar not null,
+lname varchar not null,
+city varchar not null,
+state varchar not null,
+zip int not null,
+age int not null
+);
+CREATE TABLE
+
+hospital_management_system=# Create Table Hospital(hos_id int primary key not null,
+hospital_management_system(# hos_name varchar not null,
+hospital_management_system(# hos_address varchar not null,
+hospital_management_system(# P_id int references Patient(P_id)
+hospital_management_system(# );
+CREATE TABLE
+
+hospital_management_system=# Create Table Doctor(Dr_id int primary key not null,
+hospital_management_system(# DR_name varchar not null,
+hospital_management_system(# Designation varchar not null,
+hospital_management_system(# experince int not null,
+hospital_management_system(# P_id int references Patient(P_id)
+hospital_management_system(# );
+CREATE TABLE
+
+hospital_management_system=# Create Table Bill(bill_no int unique not null,
+hospital_management_system(# date varchar not null,
+hospital_management_system(# amount real not null,
+hospital_management_system(# P_id int references patient(P_id)
+hospital_management_system(# );
+CREATE TABLE
+
+hospital_management_system=# Create TABLE MEDICINE(Reg_no int primary key not null,
+hospital_management_system(# name varchar not null,
+hospital_management_system(# price real not null,
+hospital_management_system(# company varchar not null,
+hospital_management_system(# P_id int references patient(P_id)
+hospital_management_system(# );
+CREATE TABLE
+
+hospital_management_system=# Create Table Prescribe(Diagnosis_id int primary key not null,
+hospital_management_system(# Dr_id int references Doctor(Dr_id),
+hospital_management_system(# P_id int references Patient(P_id),
+hospital_management_system(# remark varchar );
+CREATE TABLE
+
+
+jdhdj
