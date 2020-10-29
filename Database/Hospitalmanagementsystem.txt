@@ -114,15 +114,21 @@ hospital_management_system=# Insert into medicine values(1024,'zentac',21.00,5);
 INSERT 0 1
 
 
-hospital_management_system=# Insert into prescribe values(7871,111,1,'small issue');
-INSERT 0 1
-hospital_management_system=# Insert into prescribe values(7872,112,2,'fever');
-INSERT 0 1
-hospital_management_system=# Insert into prescribe values(7873,113,3,'minor attack');
-INSERT 0 1
-hospital_management_system=# Insert into prescribe values(7874,114,4,'small issue');
-INSERT 0 1
-hospital_management_system=# Insert into prescribe values(7875,115,5,'skin problem');
-INSERT 0 1
+hospital_management_system=# Update appointment Set date_time='2020-10-17 13:05' where p_id=2;
+UPDATE 1
+hospital_management_system=# Update appointment Set date_time='2020-10-17 10:05' where p_id=3;
+UPDATE 1
+hospital_management_system=# Update appointment Set date_time='2020-10-9 12:17' where p_id=4;
+UPDATE 1
+hospital_management_system=# Update appointment Set date_time='2020-10-9 17:10' where p_id=5;
+UPDATE 1
+hospital_management_system=# select * from appointment;
+ dr_id | p_id |    remark    |      date_time      
+-------+------+--------------+---------------------
+   111 |    1 | small issue  | 2020-10-26 15:16:00
+   112 |    2 | fever        | 2020-10-17 13:05:00
+   113 |    3 | minor attack | 2020-10-17 10:05:00
+   114 |    4 | small issue  | 2020-10-09 12:17:00
+   115 |    5 | skin problem | 2020-10-09 17:10:00
 
 
