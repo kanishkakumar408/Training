@@ -220,6 +220,13 @@ hospital_management_system=# select * from appointment where dr_id=115;
 -------+------+--------------+---------------------
    115 |    5 | skin problem | 2020-10-09 17:10:00
 
+6. Query to select bill of a particular patient :- 
+
+hospital_management_system=# select * from bill where p_id=3;
+ bill_no |    date    | amount | p_id 
+---------+------------+--------+------
+   10082 | 17-10-2020 |   1700 |    3
+
 
 
 
