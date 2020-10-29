@@ -133,6 +133,8 @@ hospital_management_system=# select * from appointment;
 
 
 **********************************Inserting new entry into all the tables**************************************************************
+4. 
+
 
 hospital_management_system=# Insert into patient values(6,'mridul','singh','kanpur','uttar pradesh',208001,18);
 INSERT 0 1
@@ -211,7 +213,12 @@ hospital_management_system=# select * from medicine;
    1025 | cosmegen     |  1500 | 6       |    6
    1026 | ciplox d     |    30 | 7       |    7
 
+5. Query to select appointment date of doctor -
 
+hospital_management_system=# select * from appointment where dr_id=115;
+ dr_id | p_id |    remark    |      date_time      
+-------+------+--------------+---------------------
+   115 |    5 | skin problem | 2020-10-09 17:10:00
 
 
 
