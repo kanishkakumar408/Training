@@ -227,6 +227,13 @@ hospital_management_system=# select * from bill where p_id=3;
 ---------+------------+--------+------
    10082 | 17-10-2020 |   1700 |    3
 
+7. select query to find the details of a patient :-
+
+hospital_management_system=# select * from patient where p_id=2;
+ p_id | fname | lname |   city   |     state     |  zip   | age 
+------+-------+-------+----------+---------------+--------+-----
+    2 | Shiva | Raj   | Varanasi | Uttar pradesh | 212011 |  21
+
 
 
 
