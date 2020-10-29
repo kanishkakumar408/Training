@@ -132,3 +132,87 @@ hospital_management_system=# select * from appointment;
    115 |    5 | skin problem | 2020-10-09 17:10:00
 
 
+**********************************Inserting new entry into all the tables**************************************************************
+
+hospital_management_system=# Insert into patient values(6,'mridul','singh','kanpur','uttar pradesh',208001,18);
+INSERT 0 1
+hospital_management_system=# Insert into patient values(7,'ankur','garg','noida','uttar pradesh',110096,19);
+INSERT 0 1
+
+hospital_management_system=# select * from patient;
+ p_id |  fname  |  lname   |   city    |     state      |  zip   | age 
+------+---------+----------+-----------+----------------+--------+-----
+    1 | Raj     | Kumar    | Lucknow   | Uttar pradesh  | 226001 |  20
+    2 | Shiva   | Raj      | Varanasi  | Uttar pradesh  | 212011 |  21
+    3 | tejas   | talpade  | pune      | Maharashtra    | 410038 |  24
+    4 | Sandeep | Bhumihar | Indore    | Madhya pradesh | 451010 |  23
+    5 | krishiv | pandey   | Prayagraj | Uttar pradesh  | 210010 |  22
+    6 | mridul  | singh    | kanpur    | uttar pradesh  | 208001 |  18
+    7 | ankur   | garg     | noida     | uttar pradesh  | 110096 |  19
+
+hospital_management_system=# Insert into doctor values(116,'SP Singh','Oncologists','18',6);
+INSERT 0 1
+hospital_management_system=# Insert into doctor values(117,'Neeraj','ophthamologists','15',7);
+INSERT 0 1
+hospital_management_system=# select * from doctor;
+ dr_id |  dr_name  |   designation   | experince | p_id 
+-------+-----------+-----------------+-----------+------
+   111 | shambhav  | neurologist     |         3 |    1
+   112 | Lokesh    | physician       |         5 |    2
+   113 | Mayank    | cardiologist    |        10 |    3
+   114 | Mohan     | pshychiatrist   |        16 |    4
+   115 | soj komyo | Dermatologists  |         6 |    5
+   116 | SP Singh  | Oncologists     |        18 |    6
+   117 | Neeraj    | ophthamologists |        15 |    7
+
+hospital_management_system=# Insert into bill values(10085,'08-10-2020',1600.00,6);
+INSERT 0 1
+hospital_management_system=# insert into bill values(10086,'07-10-2020',1560.00,7);
+INSERT 0 1
+hospital_management_system=# select * from bill;
+ bill_no |    date    | amount | p_id 
+---------+------------+--------+------
+   10080 | 26-10-2020 |   1200 |    1
+   10081 | 17-10-2020 |  10000 |    2
+   10082 | 17-10-2020 |   1700 |    3
+   10083 | 09-10-2020 |   1970 |    4
+   10084 | 09-10-2020 |  10970 |    5
+   10085 | 08-10-2020 |   1600 |    6
+   10086 | 07-10-2020 |   1560 |    7
+
+
+hospital_management_system=# Insert into appointment values(116,6,'routine checkup','2020-10-08 10:15:00');
+INSERT 0 1
+hospital_management_system=# Insert into appointment values(117,7,'routine checkup','2020-10-08 15:00:00');
+INSERT 0 1
+hospital_management_system=# select * from appointment;
+ dr_id | p_id |     remark      |      date_time      
+-------+------+-----------------+---------------------
+   111 |    1 | small issue     | 2020-10-26 15:16:00
+   112 |    2 | fever           | 2020-10-17 13:05:00
+   113 |    3 | minor attack    | 2020-10-17 10:05:00
+   114 |    4 | small issue     | 2020-10-09 12:17:00
+   115 |    5 | skin problem    | 2020-10-09 17:10:00
+   116 |    6 | routine checkup | 2020-10-08 10:15:00
+   117 |    7 | routine checkup | 2020-10-08 15:00:00
+
+hospital_management_system=# Insert into medicine values(1025,'cosmegen',1500,6,6);
+INSERT 0 1
+hospital_management_system=# Insert into medicine values(1026,'ciplox d',30,7,7);
+INSERT 0 1
+hospital_management_system=# select * from medicine;
+ reg_no |     name     | price | company | p_id 
+--------+--------------+-------+---------+------
+   1020 | Combiflam    |    10 | 1       |    1
+   1021 | Citrazin     |    18 | 2       |    2
+   1022 | Roxid-M      |     8 | 3       |    3
+   1023 | nor metrozil |    19 | 4       |    4
+   1024 | zentac       |    21 | 5       |    5
+   1025 | cosmegen     |  1500 | 6       |    6
+   1026 | ciplox d     |    30 | 7       |    7
+
+
+
+
+
+
