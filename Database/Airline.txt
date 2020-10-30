@@ -156,6 +156,28 @@ airline=# Insert into certified values(110,1013);
 INSERT 0 1
 
 
+*****************************************applying Query in database****************************************
+
+a. Find the names of aircraft such that all pilots certified to operate them earn
+more than $80,000.
+
+airline=# select aname from Aircraft where aid in(select aid from Certified where eid in(select eid from employees where salary>80000));
+    aname     
+--------------
+ Boeing 12
+ Boeing 13
+ Boeing 14
+ Boeing 15
+ kingfisher 2
+ kingfisher 3
+ jetairways 1
+ jetairways 2
+ jetairways 3
+ jetairways 4
+ jetblue 1
+ jetblue 2
+
+
 
 
 
