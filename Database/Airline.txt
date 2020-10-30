@@ -128,4 +128,34 @@ airline=# Insert into employees values(117,'lina',82000);
 INSERT 0 1
 
 
+Inserting values in Certified -
+
+airline=# Insert into certified values(101,1001);
+INSERT 0 1
+airline=# Insert into certified values(102,1002);
+INSERT 0 1
+airline=# Insert into certified values(103,1003);
+INSERT 0 1
+airline=# Insert into certified values(105,1004);
+INSERT 0 1
+airline=# Insert into certified values(105,1006);
+INSERT 0 1
+airline=# Insert into certified values(105,1007);
+INSERT 0 1
+airline=# Insert into certified values(105,1008);
+INSERT 0 1
+airline=# Insert into certified values(109,1009);
+INSERT 0 1
+airline=# Insert into certified values(109,1010);
+INSERT 0 1
+airline=# Insert into certified values(109,1011);
+INSERT 0 1
+airline=# Insert into certified values(109,1012);
+INSERT 0 1
+airline=# Insert into certified values(110,1013);
+INSERT 0 1
+
+
+
+
 
