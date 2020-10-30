@@ -235,5 +235,26 @@ hospital_management_system=# select * from patient where p_id=2;
     2 | Shiva | Raj   | Varanasi | Uttar pradesh | 212011 |  21
 
 
+8. Query to select overall bill and total amount of a same patient -
+
+Inserting new values ( hospital_management_system=# insert into appointment values(115,1,'spots on facee','2020-10-07 10:20:00');
+INSERT 0 1
+hospital_management_system=# insert into Bill values(10087,'07-10-2020',1200,1);
+INSERT 0 1 )
+
+hospital_management_system=# Select * from bill where p_id=1;
+ bill_no |    date    | amount | p_id 
+---------+------------+--------+------
+   10080 | 26-10-2020 |   1200 |    1
+   10087 | 07-10-2020 |   1200 |    1
+
+
+hospital_management_system=# select sum(amount) from Bill where p_id=1;
+ sum  
+------
+ 2400
+
+
+
 
 
