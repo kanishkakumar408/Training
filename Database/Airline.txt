@@ -92,4 +92,40 @@ airline=# Insert into Aircraft values(1013,'jetblue 2',4235);
 INSERT 0 1
 
 
+Inserting values in Employees -
+
+airline=# Insert into employees values(101,'jack',85000);
+INSERT 0 1
+airline=# Insert into employees values(102,'emily',90000);
+INSERT 0 1
+airline=# Insert into employees values(103,'john',105000);
+INSERT 0 1
+airline=# Insert into employees values(105,'micheal',95000);
+INSERT 0 1
+airline=# Insert into employees values(106,'Elliot',78000);
+INSERT 0 1
+airline=# Insert into employees values(107,'ambrose',45000);
+INSERT 0 1
+airline=# Insert into employees values(108,'cliar',32000);
+INSERT 0 1
+airline=# Insert into employees values(109,'Tejas',132000);
+INSERT 0 1
+airline=# Insert into employees values(110,'Vikram',97000);
+INSERT 0 1
+airline=# Insert into employees values(111,'matt',87000);
+INSERT 0 1
+airline=# Insert into employees values(112,'Shaurya',99000);
+INSERT 0 1
+airline=# Insert into employees values(113,'arjun',109000);
+INSERT 0 1
+airline=# Insert into employees values(114,'henry',82000);
+INSERT 0 1
+airline=# Insert into employees values(115,'elisa',39000);
+INSERT 0 1
+airline=# Insert into employees values(116,'sara',45000);
+INSERT 0 1
+airline=# Insert into employees values(117,'lina',82000);
+INSERT 0 1
+
+
 
