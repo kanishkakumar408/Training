@@ -62,5 +62,34 @@ INSERT 0 2
 airline=# Insert into Flights values(121287,'los angeles',2500,'9:10:00','13:10:00',9000,'chicago');
 INSERT 0 1
 
+Inserting values in Aircrafts table -
+
+airline=# Insert into Aircraft values(1001,'Boeing 12',4800);
+INSERT 0 1
+airline=# Insert into Aircraft values(1002,'Boeing 13',4150);
+INSERT 0 1
+airline=# Insert into Aircraft values(1003,'Boeing 14',5760);
+INSERT 0 1
+airline=# Insert into Aircraft values(1004,'Boeing 15',5260);
+INSERT 0 1
+airline=# Insert into Aircraft values(1005,'kingfisher 1',4360);
+INSERT 0 1
+airline=# Insert into Aircraft values(1006,'kingfisher 2',3960);
+INSERT 0 1
+airline=# Insert into Aircraft values(1007,'kingfisher 3',2060);
+INSERT 0 1
+airline=# Insert into Aircraft values(1008,'jetairways 1',4260);
+INSERT 0 1
+airline=# Insert into Aircraft values(1009,'jetairways 2',6760);
+INSERT 0 1
+airline=# Insert into Aircraft values(1010,'jetairways 3',6230);
+INSERT 0 1
+airline=# Insert into Aircraft values(1011,'jetairways 4',5135);
+INSERT 0 1
+airline=# Insert into Aircraft values(1012,'jetblue 1',1335);
+INSERT 0 1
+airline=# Insert into Aircraft values(1013,'jetblue 2',4235);
+INSERT 0 1
+
 
 
