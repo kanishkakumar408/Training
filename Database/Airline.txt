@@ -4,4 +4,37 @@ _________________________________________________AIRLINE DATABAE________________
 *******Database Creation*********
 
 postgres=# CREATE DATABASE Airline;
-CREATE DATABASE.
+CREATE DATABASE
+
+
+*******Table Creation*********
+
+postgres=# Create Table Flights(flno INT primary key not null,
+_from varchar not null,
+distance Int not null,
+departs Time not null,
+arrives Time not null,
+Price Int not null
+);
+CREATE TABLE
+
+
+postgres=# Create Table Aircraft(aid Int primary key,
+postgres(# aname varchar not null,
+postgres(# cruisingrange Int not null
+postgres(# );
+CREATE TABLE
+
+
+postgres=# Create Table employees(eid Int primary key,
+postgres(# ename Varchar not null,
+postgres(# salary Int not null
+postgres(# );
+CREATE TABLE
+
+
+postgres=# Create Table Certified(eid int references Employees(eid),
+aid int references Aircraft(aid)
+);
+CREATE TABLE
+
