@@ -1,0 +1,7 @@
+_________________________________________________AIRLINE DATABAE_________________________________________________________________________
+
+
+*******Database Creation*********
+
+postgres=# CREATE DATABASE Airline;
+CREATE DATABASE.
