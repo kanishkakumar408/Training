@@ -70,7 +70,7 @@ airline=# Insert into Aircraft values(1002,'Boeing 13',4150);
 INSERT 0 1
 airline=# Insert into Aircraft values(1003,'Boeing 14',5760);
 INSERT 0 1
-airline=# Insert into Aircraft values(1004,'Boeing 15',5260);
+airline=# Insert into Aircraft values(1004,'Boeing 15',900);
 INSERT 0 1
 airline=# Insert into Aircraft values(1005,'kingfisher 1',4360);
 INSERT 0 1
@@ -136,15 +136,9 @@ airline=# Insert into certified values(102,1002);
 INSERT 0 1
 airline=# Insert into certified values(103,1003);
 INSERT 0 1
-airline=# Insert into certified values(105,1004);
-INSERT 0 1
-airline=# Insert into certified values(105,1006);
-INSERT 0 1
-airline=# Insert into certified values(105,1007);
+airline=# Insert into certified values(109,1009);
 INSERT 0 1
 airline=# Insert into certified values(105,1008);
-INSERT 0 1
-airline=# Insert into certified values(109,1009);
 INSERT 0 1
 airline=# Insert into certified values(109,1010);
 INSERT 0 1
@@ -154,6 +148,9 @@ airline=# Insert into certified values(109,1012);
 INSERT 0 1
 airline=# Insert into certified values(110,1013);
 INSERT 0 1
+airline=# Insert into certified values(116,1004);
+INSERT 0 1
+
 
 
 *****************************************applying Query in database****************************************
@@ -177,7 +174,13 @@ airline=# select aname from Aircraft where aid in(select aid from Certified wher
  jetblue 1
  jetblue 2
 
+b.For each pilot who is certified for more than three aircraft, find the eid and the
+maximum cruisingrange of the aircraft for which she or he is certified
 
+airline=# select  c.eid ,Max(cruisingrange) from certified c, aircraft a where c.aid=a.aid Group by c.eid having count(eid)>3;
+ eid | max  
+-----+------
+ 109 | 6760
 
 
 
