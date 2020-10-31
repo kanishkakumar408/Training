@@ -231,5 +231,24 @@ airline=# select ename from employees where eid in(select eid from Certified whe
  emily
  john
 
+f. Find the aids of all aircraft that can be used on routes from Los Angeles to
+Chicago.
+
+postgres=# \c airline
+You are now connected to database "airline" as user "postgres".
+airline=# select aid from aircraft where cruisingrange>(select distance from flights where _from='los angeles' and _to='chicago');
+ aid  
+------
+ 1001
+ 1002
+ 1003
+ 1005
+ 1006
+ 1008
+ 1009
+ 1010
+ 1011
+ 1013
+
 
 
