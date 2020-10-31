@@ -259,7 +259,7 @@ airline=# Select ename from employees where eid in(select eid from certified whe
  Vikram
 (3 rows)
 
-j. Compute the difference between the average salary of a pilot and the average salary of all employees (including pilots)
+k. Print the name and salary of every nonpilot whose salary is more than the average salary for pilots.
 
 airline=# Select ename,salary from employees where eid not in(select eid from certified) and salary>(select Avg(salary) from employees where eid in (select eid from certified));
   ename  | salary 
