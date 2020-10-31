@@ -182,5 +182,32 @@ airline=# select  c.eid ,Max(cruisingrange) from certified c, aircraft a where c
 -----+------
  109 | 6760
 
+Create views pilots -
+
+airline=# create view Pilots as select c.aid,c.eid,e.ename,e.salary from certified c inner join employees e using (eid);
+CREATE VIEW
+airline=# select * from pilots;
+ aid  | eid |  ename  | salary 
+------+-----+---------+--------
+ 1001 | 101 | jack    |  85000
+ 1002 | 102 | emily   |  90000
+ 1003 | 103 | john    |   6000
+ 1009 | 109 | Tejas   | 132000
+ 1010 | 109 | Tejas   | 132000
+ 1011 | 109 | Tejas   | 132000
+ 1012 | 109 | Tejas   | 132000
+ 1013 | 110 | Vikram  |  97000
+ 1008 | 105 | micheal |  95000
+ 1004 | 116 | sara    |    200
+
+c. Find the names of pilots whose salary is less than the price of the cheapest route from Los Angeles to Honolulu.
+
+airline=# Select ename from pilots where salary <(select MIN(price) from flights  where flno in(select flno from flights where _from='los' and _to='Honolulu'));
+ ename 
+-------
+ john
+ sara
+
+
 
 
