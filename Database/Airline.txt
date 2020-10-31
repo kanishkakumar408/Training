@@ -257,7 +257,20 @@ airline=# Select ename from employees where eid in(select eid from certified whe
  micheal
  Tejas
  Vikram
-(3 rows).
+(3 rows)
+
+j. Compute the difference between the average salary of a pilot and the average salary of all employees (including pilots)
+
+airline=# Select ename,salary from employees where eid not in(select eid from certified) and salary>(select Avg(salary) from employees where eid in (select eid from certified));
+  ename  | salary 
+---------+--------
+ Elliot  |  78000
+ matt    |  87000
+ Shaurya |  99000
+ arjun   | 109000
+ henry   |  82000
+ lina    | 108000
+
 
 
 
