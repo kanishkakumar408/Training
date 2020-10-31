@@ -250,5 +250,15 @@ airline=# select aid from aircraft where cruisingrange>(select distance from fli
  1011
  1013
 
+h.Print the enames of pilots who can operate planes with cruisingrange greater than 3000 miles but are not certified on any Boeing aircraft.
+airline=# Select ename from employees where eid in(select eid from certified where aid in(select aid from aircraft where cruisingrange>3000 and aname not like 'Boe%'));
+  ename  
+---------
+ micheal
+ Tejas
+ Vikram
+(3 rows)
+
+
 
 
