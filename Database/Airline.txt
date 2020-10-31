@@ -257,7 +257,7 @@ airline=# Select ename from employees where eid in(select eid from certified whe
  micheal
  Tejas
  Vikram
-(3 rows)
+(3 rows).
 
 
 
