@@ -222,5 +222,14 @@ airline=# select a.aname , round(avg(b.salary)) as average_salary from (select a
  jetairways 3 |         132000
  Boeing 14    |           6000
 
+e. Find the names of pilots certified for some Boeing aircraft.
+airline=# select ename from employees where eid in(select eid from Certified where aid in(select aid from  aircraft where aname Like 'Boe%'));
+ ename 
+-------
+ jack
+ sara
+ emily
+ john
+
 
 
