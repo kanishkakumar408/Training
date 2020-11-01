@@ -271,6 +271,20 @@ airline=# Select ename,salary from employees where eid not in(select eid from ce
  henry   |  82000
  lina    | 108000
 
+l. Print the names of employees who are certified only on aircrafts with cruising range longer than 1000 miles.
+You are now connected to database "airline" as user "postgres".
+airline=# select ename from employees where eid in(select eid from certified where aid in(select aid from aircraft where cruisingrange>1000));
+  ename  
+---------
+ jack
+ emily
+ micheal
+ Tejas
+ Vikram
+ john
+(6 rows)
+
+
 
 
 
