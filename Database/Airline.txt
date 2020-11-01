@@ -284,6 +284,15 @@ airline=# select ename from employees where eid in(select eid from certified whe
  john
 (6 rows)
 
+n. Print the names of employees who are certified only on aircrafts with cruising range longer than 1000 miles and who are certified on some Boeing aircraft.
+
+airline=# select ename from employees where eid in(select eid from certified where aid in(select aid from aircraft where cruisingrange>1000 and aname Like 'Boe%'));
+ ename 
+-------
+ john
+ emily
+ jack
+(3 rows)
 
 
 
