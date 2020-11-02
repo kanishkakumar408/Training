@@ -310,6 +310,19 @@ airline=# select ename from(select ename from pilots where aid in(select aid fro
 (1 row)
 
 
+g. Identify the routes that can be piloted by every pilot who makes more than $100,000.
+
+airline=# Select _from , _to from flights as x inner join(Select cruisingrange from aircraft where aid in(Select aid from pilots where salary>100000)) as y on(x.distance<cruisingrange) group by _from,_to;
+    _from    |   _to    
+-------------+----------
+ madison     | tokyo
+ los angeles | chicago
+ delhi       | tokyo
+ New delhi   | kochi
+ Mumbai      | Aizwal
+ tokyo       | new york
+(6 rows)
+
 
 
 
