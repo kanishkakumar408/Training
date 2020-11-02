@@ -323,6 +323,14 @@ airline=# Select _from , _to from flights as x inner join(Select cruisingrange f
  tokyo       | new york
 (6 rows)
 
+i. A customer wants to travel from Madison to New York with no more than two changes of flight. List the choice of departure times from Madison if the customer wants to arrive in New York by 6 p.m.
+
+airline=# Select departs from flights where flno in(select flno from flights where _from='madison' and _to='new york' and arrives<='18:00:00' Union Select flno from flights where _from='madison' And _to in(select _from from flights where _to='new york' and arrives<='18:00:00'));
+ departs  
+----------
+ 05:10:00
+(1 row)
+
 
 
 
