@@ -301,6 +301,17 @@ airline=# select (Select Avg(salary) from pilots) - (select avg(salary) from emp
  16107.500000000000
 (1 row)
 
+m. Print the names of employees who are certified only on aircrafts with cruising range longer than 1000 miles, but on at least two such aircrafts
+
+airline=# select ename from(select ename from pilots where aid in(select aid from aircraft where cruisingrange>1000)) as a group by ename having count(ename)>=2;
+ ename 
+-------
+ Tejas
+(1 row)
+
+
+
+
 
 
 
