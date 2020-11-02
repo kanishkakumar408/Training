@@ -202,11 +202,13 @@ airline=# select * from pilots;
 
 c. Find the names of pilots whose salary is less than the price of the cheapest route from Los Angeles to Honolulu.
 
-airline=# Select ename from pilots where salary <(select MIN(price) from flights  where flno in(select flno from flights where _from='los' and _to='Honolulu'));
+airline=# Select ename from pilots where salary<(select Min(price) minprice from flights where flno in(select flno from flights where _from='los' and _to='Honolulu'));
  ename 
 -------
  john
  sara
+(2 rows)
+
 
 d. For all aircraft with cruisingrange over 1000 miles, find the name of the aircraft and the average salary of all pilots certified for this aircraft
 airline=# select a.aname , round(avg(b.salary)) as average_salary from (select aname, aid from aircraft where cruisingrange>1000) as a inner join pilots as b using(aid) group by a.aname;
@@ -231,8 +233,7 @@ airline=# select ename from employees where eid in(select eid from Certified whe
  emily
  john
 
-f. Find the aids of all aircraft that can be used on routes from Los Angeles to
-Chicago.
+f. Find the aids of all aircraft that can be used on routes from Los Angeles to Chicago.
 
 postgres=# \c airline
 You are now connected to database "airline" as user "postgres".
