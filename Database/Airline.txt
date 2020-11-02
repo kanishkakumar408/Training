@@ -155,8 +155,7 @@ INSERT 0 1
 
 *****************************************applying Query in database****************************************
 
-a. Find the names of aircraft such that all pilots certified to operate them earn
-more than $80,000.
+a. Find the names of aircraft such that all pilots certified to operate them earn more than $80,000.
 
 airline=# select aname from Aircraft where aid in(select aid from Certified where eid in(select eid from employees where salary>80000));
     aname     
@@ -174,8 +173,7 @@ airline=# select aname from Aircraft where aid in(select aid from Certified wher
  jetblue 1
  jetblue 2
 
-b.For each pilot who is certified for more than three aircraft, find the eid and the
-maximum cruisingrange of the aircraft for which she or he is certified
+b.For each pilot who is certified for more than three aircraft, find the eid and the maximum cruisingrange of the aircraft for which she or he is certified
 
 airline=# select  c.eid ,Max(cruisingrange) from certified c, aircraft a where c.aid=a.aid Group by c.eid having count(eid)>3;
  eid | max  
@@ -294,6 +292,14 @@ airline=# select ename from employees where eid in(select eid from certified whe
  emily
  jack
 (3 rows)
+
+j. Compute the difference between the average salary of a pilot and the average salary of all employees (including pilots)
+
+airline=# select (Select Avg(salary) from pilots) - (select avg(salary) from employees) as Difference; 
+     difference     
+--------------------
+ 16107.500000000000
+(1 row)
 
 
 
