@@ -23,5 +23,39 @@
 2.7.1 :010 > h
  => {"a"=>100, "b"=>200, "c"=>300} 
 
+6. assoc(obj) -
+2.7.1 :011 > h={"colors"=> ["red","blue","green"], "letters"=> ["a","b","c"]}
+2.7.1 :012 > h.assoc("letters")
+ => ["letters", ["a", "b", "c"]] 
 
+7. clear -> hash
+2.7.1 :014 > h={"a" => 100, "b" => 200}
+2.7.1 :015 > h.clear
+ => {} 
+
+8. defaut =obj->obj :-
+2.7.1 :021 > h={"a"=>100 , "b"=>200}
+2.7.1 :022 > h.default ="go fish"
+2.7.1 :023 > h["z"]
+ => "go fish" 
+
+9. delete key :-
+2.7.1 :025 > h={"a"=>100 , "b"=>200}
+2.7.1 :026 > h.delete("a")
+ => 100 
+
+10. delete_if :-
+2.7.1 :028 > h={"a"=>100 , "b"=>200, "c"=> 300}
+2.7.1 :029 > h.delete_if {|key,value| key>="b"}
+ => {"a"=>100} 
+
+11. each{|key , value| block} -> hash :-
+2.7.1 :028 > h={"a"=>100 , "b"=>200, "c"=> 300}
+2.7.1 :029 > h.delete_if {|key,value| key>="b"}
+ => {"a"=>100} 
+
+12.each_key{|key , value| block} -> hsh
+2.7.1 :032 > h.each_key {|key | puts key}
+a
+b
 
