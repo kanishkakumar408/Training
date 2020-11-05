@@ -1,0 +1,25 @@
+1. time
+
+2.7.1 :004 > time=Time.new
+2.7.1 :005 > puts "Current Time :" +time.inspect
+Current Time :2020-11-04 15:53:01.00336038 +0530
+ => nil  
+2.7.1 :003 > puts time.year
+2020
+ => nil 
+2.7.1 :004 > puts time.month
+11
+ => nil 
+2.7.1 :005 > puts time.day
+4
+ => nil 
+2.7.1 :006 > puts time.yday
+309
+ => nil 
+2.7.1 :007 > puts time.hour
+15
+ => nil 
+2.7.1 :008 > puts time.min
+54
+ => nil
+
