@@ -1,0 +1,78 @@
+<html>
+<head>
+<script>
+function fn(){
+var rd1=document.getElementById("rd1");
+var rd2=document.getElementById("rd2");
+var rd3=document.getElementById("rd3");
+var rd4=document.getElementById("rd4");
+var rd5=document.getElementById("rd5");
+var rd6=document.getElementById("rd6");
+var rd7=document.getElementById("rd7");
+var rd8=document.getElementById("rd8");
+if(rd1.checked==true)
+alert("you have given vote to:" +rd1.value);
+else if(rd2.checked==true)
+alert("you have given vote to:" +rd2.value);
+else if(rd3.checked==true)
+alert("you have given vote to:" +rd3.value);
+else if(rd4.checked==true)
+alert("you have given vote to:" +rd4.value);
+else if(rd5.checked==true)
+alert("you have given vote to:" +rd5.value);
+else if(rd6.checked==true)
+alert("you have given vote to:" +rd6.value);
+else if(rd7.checked==true)
+alert("you have given vote to:" +rd7.value);
+else if(rd8.checked==true)
+alert("you have given vote to:" +rd8.value);
+else
+alert("you are not given vote to any of the party")
+}
+</script>
+</head>
+<body>
+<div class=title>Voting Machine</div>
+<table border="6">
+<tr>
+<td> <h1>Political party</h1></td>
+<td> <h1>vote it</h1></td>
+</tr>
+<tr>
+<td> <p>1. BJP</p></td>
+<td> <input id="rd1" type="radio" name="vote" value="Bjp"/></input></td>
+</tr>
+<tr>
+<td> <p>2. CONGRESS</p></td>
+<td> <input id="rd2" type="radio" name="vote" value="congess"/></input></td>
+</tr>
+<tr>
+<td> <p>3. SHIVSENA</p></td>
+<td> <input id="rd3" type="radio" name="vote" value="shivsena"/></input></td>
+</tr>
+<tr>
+<td> <p>4. AIMIM</p></td>
+<td> <input id="rd4" type="radio" name="vote" value="Aimim"/></input></td>
+</tr>
+<tr>
+<td> <p>5. BJD</p></td>
+<td> <input id="rd5" type="radio" name="vote" value="Bjd"/></input></td>
+</tr>
+<tr>
+<td> <p>6. NCP</p></td>
+<td> <input id="rd6" type="radio" name="vote" value="Ncp"/></input></td>
+</tr>
+<tr>
+<td> <p>7. YSRCP</p></td>
+<td> <input id="rd7" type="radio" name="vote" value="ysrcp"/></input></td>
+</tr>
+<tr>
+<td> <p>8. BSP</p></td>
+<td> <input id="rd8" type="radio" name="vote" value="Bsp"/></input></td>
+</tr>
+<tr>
+<td colspan="2"> <button onclick="fn()" id="btn1" >Vote</button></td>
+</tr>
+</table>
+</body>
+</html>
