@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,14 +15,21 @@
 <br>
 <div id="form">
 <form name="myform" action="">
-First name: <input type="text" name="fname" id="fn" class="name"><br><br>
-Last name: <input type="text" name="lname" id="ln" class="name"><br><br>
+First name: <input type="text" name="fname" id="fn" class="name" onkeypress="return lettersOnly(event)"><br><br>
+Last name: <input type="text" name="lname" id="ln" class="name" onkeypress="return lettersOnly(event)"><br><br>
 Enter Email: <input type="email" name="email" id="e"><br><br>
 Password: <input type="password" name="password" id="pswd"><br><br>
-Phone no.: <input type="number" name="number" id="no"><br><br>
-Date Of Birth: <input type="date" name="dateofbirth" id="dob"><br><br>
+Phone no.: <input type="text" name="number" id="no" ><br><br>
+
+<!-- Date Of Birth MM:-<input size="2" tabindex="6" maxlength="2"  name="month" id="mon" onkeyup="fn(this,this.value)">
+DD:-<input size="2" tabindex="7" maxlength="2"  name="day" id="day" onkeyup="fn(this,this.value)">
+YY:-<input size="4" tabindex="8" maxlength="4"  name="year" id="ye" onkeyup="fn(this,this.value)"><br><br> -->
+Date Of Birth:- MM<input size="3" tabindex="6" maxlength="3" id="mn" onkeyup="toUnicode(this,this.value)">
+DD:-<input size="2" tabindex="7" maxlength="2" id="dy" onkeyup="toUnicode(this,this.value)">
+YY:-<input size="4" tabindex="8" maxlength="4" id="ye" onkeyup="toUnicode(this,this.value)">
+<br><br>
 User Id: <input type="text" name="regid" id="ri"><br><br>
-<input type="submit" value="Submit" onclick="myfunc()" id="btn">
+<input type="submit" value="Submit" onclick="alert(myfunc())" id="btn">
 </form>
 </div>
 </body>

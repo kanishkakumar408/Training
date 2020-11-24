@@ -115,7 +115,7 @@ if((current_year-year)<18)
     return "you are not 18+"
 }
 else{
-    
+
 }
 
 {
@@ -132,3 +132,13 @@ function toUnicode(elmnt,content){
   }
 }
 
+function lettersOnly() 
+{
+            var charCode = event.keyCode;
+
+            if ((charCode > 64 && charCode < 91) || (charCode > 96 && charCode < 123) || charCode == 8)
+
+                return true;
+            else
+                return false;
+}
