@@ -6,7 +6,7 @@ function myfunc(){
     var number= document.myform.number.value;
     var DOB= document.myform.dateofbirth.value;
     var usID= document.myform.regid.value;
-    var re= /^[a-zA-Z0-9!@#$%^&*]{6,16}$/;
+ 
    
     if (fname!="" && lname!=""){
        if(fname.length<3 || fname.length>10 || lname.length<3 || lname.length>10 )
@@ -23,7 +23,7 @@ function myfunc(){
         if (number!=""){
             if(number.length!==10)
         {
-            alert("enter the correct number")
+            alert("enter the correct Mobile number")
         }
     }
         else{
@@ -32,7 +32,7 @@ function myfunc(){
     }
     
 if (email!==""){
-    var ee= /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    var ee= /^\w+\.?\w+@[a-z]+\.[a-z]+/
     if(email.match(ee)){
 
     }
