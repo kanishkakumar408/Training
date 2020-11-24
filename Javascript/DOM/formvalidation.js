@@ -4,9 +4,8 @@ function myfunc(){
     var email= document.myform.email.value;
     var pwd= document.myform.password.value;
     var number= document.myform.number.value;
-    var DOB= document.myform.dateofbirth.value;
     var usID= document.myform.regid.value;
- 
+    
    
     if (fname!="" && lname!=""){
        if(fname.length<3 || fname.length>10 || lname.length<3 || lname.length>10 )
@@ -19,30 +18,24 @@ function myfunc(){
         alert("enter your first name and last name")
     }
     
-    {
-        if (number!=""){
-            if(number.length!==10)
-        {
-            alert("enter the correct Mobile number")
-        }
-    }
-        else{
-            alert("enter correct number")
-        }
-    }
+   
     
 if (email!==""){
     var ee= /^\w+\.?\w+@[a-z]+\.[a-z]+/
     if(email.match(ee)){
-
     }
     else{
         alert("you have entered invalid email")
     }
 }
-{if (pwd!=""){
+else{
+    alert("enter email")
+}
+
+
+if (pwd!=""){
     var pass=/^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{6,16}$/;
-    if(pwd.match(pass))
+        if(pwd.match(pass))
     {
 
     }
@@ -50,7 +43,35 @@ if (email!==""){
         alert("Enter correct password")
     }
 }
+else{
+    alert("enter password")
+}
+
+{
+    if (number!=""){
+        if(number.length!==10)
+    {
+        alert("enter the correct number")
+    }
+}
+    else{
+        alert("enter correct number")
+    }
+}
+if (usID!="")
+{
+    var uid= /^[A-Z][A-Za-z0-9_-]{3,19}$/;
+      if(usID.match(uid))
+      {
+
+      }
+     else{
+         alert("enter correct user id")
+     }
+}
+else
+{
+    alert("enter User Id")
 }
 
 }
-
