@@ -5,7 +5,26 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Form Validation</title>
+<style>
+    .div{
+        Border: 2px solid black;
+        background-color: #f2f2f2;
+        padding: 20px;
+        border-radius: 5px;
 
+    }
+    input[type=submit] {
+  width: 20%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+    }
+
+</style>
 <script src="formvalidation.js"></script>
 </head>
 
@@ -13,22 +32,22 @@
 <h2><center>Form Validation</center></h2>
 <p><u>Enter the credentials:</u></p>
 <br>
-<div id="form">
+<div id="form" class=div>
 <form name="myform" action="">
-First name: <input type="text" name="fname" id="fn" class="name" onkeypress="return lettersOnly(event)"><br><br>
-Last name: <input type="text" name="lname" id="ln" class="name" onkeypress="return lettersOnly(event)"><br><br>
-Enter Email: <input type="email" name="email" id="e"><br><br>
-Password: <input type="password" name="password" id="pswd"><br><br>
-Phone no.: <input type="text" name="number" id="no" ><br><br>
+First name: <input type="text" name="fname" id="fn" class="name" placeholder="First name" onkeypress="return lettersOnly(event)"><br><br>
+Last name: <input type="text" name="lname" id="ln" class="name" placeholder="Last name" onkeypress="return lettersOnly(event)"><br><br>
+Enter Email: <input type="email" placeholder="Enter Email" name="email" id="e"><br><br>
+Password: <input type="text" placeholder="Password" name="password" id="pswd"><br><br>
+Phone no.: <input type="number" placeholder="Mobile Number" name="number" id="no" onkeypress="return validateNumber(event)"><br><br>
 
 <!-- Date Of Birth MM:-<input size="2" tabindex="6" maxlength="2"  name="month" id="mon" onkeyup="fn(this,this.value)">
 DD:-<input size="2" tabindex="7" maxlength="2"  name="day" id="day" onkeyup="fn(this,this.value)">
 YY:-<input size="4" tabindex="8" maxlength="4"  name="year" id="ye" onkeyup="fn(this,this.value)"><br><br> -->
-Date Of Birth:- MM<input size="3" tabindex="6" maxlength="3" id="mn" onkeyup="toUnicode(this,this.value)">
-DD:-<input size="2" tabindex="7" maxlength="2" id="dy" onkeyup="toUnicode(this,this.value)">
-YY:-<input size="4" tabindex="8" maxlength="4" id="ye" onkeyup="toUnicode(this,this.value)">
+Date Of Birth:- MM<input size="3" tabindex="6" maxlength="3" placeholder="Month" id="mn" onkeyup="toUnicode(this,this.value)">
+DD:-<input size="2" tabindex="7" maxlength="2" placeholder="Day" id="dy" onkeyup="toUnicode(this,this.value)">
+YY:-<input size="4" tabindex="8" maxlength="4" placeholder="Year" id="ye" onkeyup="toUnicode(this,this.value)">
 <br><br>
-User Id: <input type="text" name="regid" id="ri"><br><br>
+User Id: <input type="text" placeholder="User Id" name="regid" id="ri"><br><br>
 <input type="submit" value="Submit" onclick="alert(myfunc())" id="btn">
 </form>
 </div>

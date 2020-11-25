@@ -110,11 +110,23 @@ else
 }
 var y=new Date();
 var current_year=y.getFullYear();
+var current_mon=y.getMonth()+1;
+var current_date=y.getDate();
 if((current_year-year)<18)
 {
     return "you are not 18+"
 }
-else{
+else if(mon>=current_mon){
+    if(mon>current_mon){
+        return "you are under 18 ";
+    }
+    else if(day>current_date){
+        "you are under 18";
+    }
+    else{
+
+    }
+
 
 }
 
@@ -141,4 +153,11 @@ function lettersOnly()
                 return true;
             else
                 return false;
+}
+function validateNumber(evt) {
+    var iKeyCode = (evt.which) ? evt.which : evt.keyCode
+    if (iKeyCode != 46 && iKeyCode > 31 && (iKeyCode < 48 || iKeyCode > 57))
+        return false;
+
+    return true;
 }
