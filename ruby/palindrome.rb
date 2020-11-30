@@ -1,3 +1,4 @@
+
 num = gets.to_i
 
 def palindrome(num)
