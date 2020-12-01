@@ -6,6 +6,9 @@ class CreateLabReports < ActiveRecord::Migration[6.0]
       t.integer:amount
       t.text:category
       t.timestamps
+      t.references :doctor, :foreign_key => :true
+      t.references :patient, :foreign_key => :true
+     
      
     end
   end
