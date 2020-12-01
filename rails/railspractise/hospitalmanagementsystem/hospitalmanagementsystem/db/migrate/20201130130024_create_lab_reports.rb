@@ -6,9 +6,7 @@ class CreateLabReports < ActiveRecord::Migration[6.0]
       t.integer:amount
       t.text:category
       t.timestamps
-      t.belongs_to:doctor
-      t.belongs_to:patient
-
+     
     end
   end
 end
