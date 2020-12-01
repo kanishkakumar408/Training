@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_01_115202) do
+ActiveRecord::Schema.define(version: 2020_12_01_123012) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,6 +36,14 @@ ActiveRecord::Schema.define(version: 2020_12_01_115202) do
     t.index ["patient_id"], name: "index_doctors_patients_on_patient_id"
   end
 
+  create_table "games", force: :cascade do |t|
+    t.string "name"
+    t.bigint "manufacturer_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["manufacturer_id"], name: "index_games_on_manufacturer_id"
+  end
+
   create_table "lab_reports", force: :cascade do |t|
     t.float "weight"
     t.date "date"
@@ -45,6 +53,12 @@ ActiveRecord::Schema.define(version: 2020_12_01_115202) do
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "patient_id"
     t.index ["patient_id"], name: "index_lab_reports_on_patient_id"
+  end
+
+  create_table "manufacturers", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "patients", force: :cascade do |t|
@@ -60,4 +74,5 @@ ActiveRecord::Schema.define(version: 2020_12_01_115202) do
 
   add_foreign_key "doctors_patients", "doctors"
   add_foreign_key "doctors_patients", "patients"
+  add_foreign_key "games", "manufacturers"
 end
