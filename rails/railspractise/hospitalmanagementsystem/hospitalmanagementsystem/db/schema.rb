@@ -10,10 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_01_123012) do
+ActiveRecord::Schema.define(version: 2020_12_01_125858) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "clients", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "doctor_patients", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
@@ -72,7 +78,16 @@ ActiveRecord::Schema.define(version: 2020_12_01_123012) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "tickets", force: :cascade do |t|
+    t.string "label"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "client_id"
+    t.index ["client_id"], name: "index_tickets_on_client_id"
+  end
+
   add_foreign_key "doctors_patients", "doctors"
   add_foreign_key "doctors_patients", "patients"
   add_foreign_key "games", "manufacturers"
+  add_foreign_key "tickets", "clients"
 end
