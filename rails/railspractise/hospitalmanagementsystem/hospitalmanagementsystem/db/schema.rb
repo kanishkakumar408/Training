@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_01_190931) do
+ActiveRecord::Schema.define(version: 2020_12_02_051010) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,14 @@ ActiveRecord::Schema.define(version: 2020_12_01_190931) do
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "customers", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "employees_id"
+    t.index ["employees_id"], name: "index_customers_on_employees_id"
   end
 
   create_table "doctor_patients", force: :cascade do |t|
@@ -49,6 +57,12 @@ ActiveRecord::Schema.define(version: 2020_12_01_190931) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["doctor_id"], name: "index_doctors_patients_on_doctor_id"
     t.index ["patient_id"], name: "index_doctors_patients_on_patient_id"
+  end
+
+  create_table "employees", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "games", force: :cascade do |t|
@@ -109,6 +123,7 @@ ActiveRecord::Schema.define(version: 2020_12_01_190931) do
 
   add_foreign_key "appointments", "hpateints"
   add_foreign_key "appointments", "physicians", column: "physicians_id"
+  add_foreign_key "customers", "employees", column: "employees_id"
   add_foreign_key "doctors_patients", "doctors"
   add_foreign_key "doctors_patients", "patients"
   add_foreign_key "games", "manufacturers"
