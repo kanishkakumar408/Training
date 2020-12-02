@@ -10,10 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_01_125858) do
+ActiveRecord::Schema.define(version: 2020_12_01_190931) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "appointments", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "hpateint_id"
+    t.bigint "physicians_id"
+    t.index ["hpateint_id"], name: "index_appointments_on_hpateint_id"
+    t.index ["physicians_id"], name: "index_appointments_on_physicians_id"
+  end
 
   create_table "clients", force: :cascade do |t|
     t.string "name"
@@ -50,6 +59,12 @@ ActiveRecord::Schema.define(version: 2020_12_01_125858) do
     t.index ["manufacturer_id"], name: "index_games_on_manufacturer_id"
   end
 
+  create_table "hpateints", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "lab_reports", force: :cascade do |t|
     t.float "weight"
     t.date "date"
@@ -78,6 +93,12 @@ ActiveRecord::Schema.define(version: 2020_12_01_125858) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "physicians", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "tickets", force: :cascade do |t|
     t.string "label"
     t.datetime "created_at", precision: 6, null: false
@@ -86,6 +107,8 @@ ActiveRecord::Schema.define(version: 2020_12_01_125858) do
     t.index ["client_id"], name: "index_tickets_on_client_id"
   end
 
+  add_foreign_key "appointments", "hpateints"
+  add_foreign_key "appointments", "physicians", column: "physicians_id"
   add_foreign_key "doctors_patients", "doctors"
   add_foreign_key "doctors_patients", "patients"
   add_foreign_key "games", "manufacturers"
