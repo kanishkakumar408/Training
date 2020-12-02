@@ -10,10 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_02_051010) do
+ActiveRecord::Schema.define(version: 2020_12_02_063800) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "account_histories", force: :cascade do |t|
+    t.text "detials"
+    t.bigint "account_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["account_id"], name: "index_account_histories_on_account_id"
+  end
+
+  create_table "accounts", force: :cascade do |t|
+    t.integer "account_number"
+    t.integer "account_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "suppliers_id"
+    t.index ["suppliers_id"], name: "index_accounts_on_suppliers_id"
+  end
 
   create_table "appointments", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
@@ -113,6 +130,12 @@ ActiveRecord::Schema.define(version: 2020_12_02_051010) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "suppliers", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "tickets", force: :cascade do |t|
     t.string "label"
     t.datetime "created_at", precision: 6, null: false
@@ -121,6 +144,8 @@ ActiveRecord::Schema.define(version: 2020_12_02_051010) do
     t.index ["client_id"], name: "index_tickets_on_client_id"
   end
 
+  add_foreign_key "account_histories", "accounts"
+  add_foreign_key "accounts", "suppliers", column: "suppliers_id"
   add_foreign_key "appointments", "hpateints"
   add_foreign_key "appointments", "physicians", column: "physicians_id"
   add_foreign_key "customers", "employees", column: "employees_id"
