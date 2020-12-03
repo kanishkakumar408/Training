@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_02_114951) do
+ActiveRecord::Schema.define(version: 2020_12_03_065446) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -94,6 +94,16 @@ ActiveRecord::Schema.define(version: 2020_12_02_114951) do
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "inpateints", force: :cascade do |t|
+    t.bigint "lab_report_id", null: false
+    t.integer "room_no"
+    t.string "Date_of_admission"
+    t.string "Date_of_discharge"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["lab_report_id"], name: "index_inpateints_on_lab_report_id"
   end
 
   create_table "lab_reports", force: :cascade do |t|
@@ -184,6 +194,7 @@ ActiveRecord::Schema.define(version: 2020_12_02_114951) do
   add_foreign_key "doctors_patients", "doctors"
   add_foreign_key "doctors_patients", "patients"
   add_foreign_key "games", "manufacturers"
+  add_foreign_key "inpateints", "lab_reports"
   add_foreign_key "lab_reports", "doctors"
   add_foreign_key "lab_reports", "patients"
   add_foreign_key "pdappointments", "doctors"
