@@ -54,3 +54,4 @@
 
 28. sudo - Used as prefix of some command that only superuser are allowed to run.
 
+29. scp - scp -v kans3.txt anoj@192.168.1.44:
