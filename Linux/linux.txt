@@ -57,3 +57,7 @@
 29. scp - scp -v kans3.txt anoj@192.168.1.44:
 
 30. top - to show the processes which are currently executing.
+
+31. ps aux |sort -nrk 3,3 | head -n 5 :- it will return top 5 running processes.
+
+32. ps -eo pid,ppid,cmd,%mem,%cpu --sort--%mem |head -n 6 :- It will also return top 5 process running currently.
