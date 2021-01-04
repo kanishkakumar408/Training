@@ -7,8 +7,9 @@ class ApplicationController < ActionController::API
   def process_token
     if request.headers['Authorization'].present?
       begin
-        jwt_payload = JWT.decode(request.headers['Authorization'].split(' ')[1].remove('"'), Rails.application.secrets.secret_key_base).first
-        @current_user_id = jwt_payload['id']
+        jwt_payload = JWT.decode(request.headers['Authorization'], 's3cr3t', true, algorithm: 'HS256')
+        @current_user_id = jwt_payload[0]['user_id'].to_i
+        	puts jwt_payload
       rescue JWT::ExpiredSignature, JWT::VerificationError, JWT::DecodeError
         head :unauthorized
       end
