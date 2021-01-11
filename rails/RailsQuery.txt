@@ -21,3 +21,9 @@ Rails Query -
 10.Find - Product.find(2) , Product.find([3,7])
 
 11.Find_by - Product.find_by("id > 7")
+
+12.Where - Product.where("id > 3")
+
+13.Where or- Product.where(id:3).or(Product.where(id:5))
+
+14. where not - Product.where.not(id: [3,4,5,6])
