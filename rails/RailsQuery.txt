@@ -35,3 +35,5 @@ Rails Query -
 17. joins - Category.joins(:products)
 
 18. left_outer_joins -  Category.left_outer_joins(:products)
+
+19. Selecting products of a category - Category.find_by(name: "canon").products
