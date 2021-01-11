@@ -1,0 +1,7 @@
+Rails Query -
+
+1 Distinct :-  Product.select(:name).distinct
+
+2.Annotate :-  Product.annotate("selecting names of product").select("id")
+
+3.Group :- Product.group(:fname) , Patient.select("id , fname").group("id)
