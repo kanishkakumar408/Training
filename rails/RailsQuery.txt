@@ -27,3 +27,11 @@ Rails Query -
 13.Where or- Product.where(id:3).or(Product.where(id:5))
 
 14. where not - Product.where.not(id: [3,4,5,6])
+
+15. Select having group - Product.select("id", "name").having("SUM(price) > 30000").group("id")
+
+16. Selecting products from a cart of a user - User.find(7).cart.products
+
+17. joins - Category.joins(:products)
+
+18. left_outer_joins -  Category.left_outer_joins(:products)
