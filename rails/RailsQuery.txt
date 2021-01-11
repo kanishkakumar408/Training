@@ -11,3 +11,9 @@ Rails Query -
 5.Limit - Product.limit(5)
 
 6.Offset - Product.offset(5)
+
+7.First - Product.first , Product.first(2)
+
+8.Last - Product.last, Product.last(2)
+
+9.Select , group , having :- User.select("created_at,id").group("created_at, id").having("id>4")
