@@ -5,3 +5,9 @@ Rails Query -
 2.Annotate :-  Product.annotate("selecting names of product").select("id")
 
 3.Group :- Product.group(:fname) , Patient.select("id , fname").group("id)
+
+4.Having with group :- Product.having("price> 40000").group("id")
+
+5.Limit - Product.limit(5)
+
+6.Offset - Product.offset(5)
