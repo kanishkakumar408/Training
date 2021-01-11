@@ -17,3 +17,7 @@ Rails Query -
 8.Last - Product.last, Product.last(2)
 
 9.Select , group , having :- User.select("created_at,id").group("created_at, id").having("id>4")
+
+10.Find - Product.find(2) , Product.find([3,7])
+
+11.Find_by - Product.find_by("id > 7")
