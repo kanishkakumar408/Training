@@ -36,6 +36,7 @@ Rails Query -
 
 18. left_outer_joins -  Category.left_outer_joins(:products)
 
+19. find all products where category name is Nikon :- Product.where(category_id: Category.where(name: 'canon'))
 19. Selecting products of a category - Category.find_by(name: "canon").products or Product.where("category_id= 2")
 
 20. scope -  scope :min_price, -> {where("price > 50000")}
